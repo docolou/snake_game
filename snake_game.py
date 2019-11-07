@@ -11,7 +11,7 @@ game_font=pygame.font.SysFont(pygame.font.get_default_font(),40)
 sound_obj = pygame.mixer.Sound("/Users/docoben/Desktop/python 遊戲課程/sound01.wav")
 sound_obj.play()
 
-player_imamge1 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/1.gif")
+player_imamge1 = pygame.image.load("")
 player_imamge2 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/2.gif")
 player_imamge3 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/3.gif")
 player_imamge4 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/4.gif")
