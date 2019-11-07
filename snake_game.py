@@ -15,6 +15,7 @@ player_imamge1 = pygame.image.load("snake_whole.png")
 
 
 px, py = 100, 200
+direction_mode = 1
 
 # idx = 0
 
@@ -30,15 +31,26 @@ while IS_RUNNING:
 
         if e.type == pygame.KEYDOWN:
             if e.key == pygame.K_RIGHT:
-                px += 1
+                direction_mode = 1
             if e.key == pygame.K_LEFT:
-                px -= 1
+                direction_mode = 2
             if e.key == pygame.K_UP:
-                py -= 1
+                direction_mode = 3
             if e.key == pygame.K_DOWN:
-                py += 1  
+                direction_mode = 4
 
+        
+    if direction_mode == 1:
+        px += 10  
+    elif direction_mode == 2:
+        px -= 10  
+    elif direction_mode == 3:
+        py -= 10 
+    elif direction_mode == 4:
+        py += 10
     
+
+    time.sleep(1)
     # create window
     base.fill((0,0,0))
     # idx %= 6
