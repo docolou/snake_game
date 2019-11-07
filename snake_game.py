@@ -11,14 +11,9 @@ game_font=pygame.font.SysFont(pygame.font.get_default_font(),40)
 sound_obj = pygame.mixer.Sound("/Users/docoben/Desktop/python 遊戲課程/sound01.wav")
 sound_obj.play()
 
-player_imamge1 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/snake_game/snake_whole.png")
-player_imamge2 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/snake_game/snake_whole.png")
-player_imamge3 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/3.gif")
-player_imamge4 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/4.gif")
-player_imamge5 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/5.gif")
-player_imamge6 = pygame.image.load("/Users/docoben/Desktop/python 遊戲課程/santas/6.gif")
+player_imamge1 = pygame.image.load("snake_whole.png")
 
-santas = [player_imamge1, player_imamge2, player_imamge3, player_imamge4, player_imamge5, player_imamge6]
+
 px, py = 100, 200
 
 # idx = 0
@@ -47,7 +42,7 @@ while IS_RUNNING:
     # create window
     base.fill((0,0,0))
     # idx %= 6
-    base.blit(santas[1], (px,py))
+    base.blit(player_imamge1, (px,py))
     pygame.display.update() #update 視窗
     # idx += 1
     # time.sleep(0.1)
