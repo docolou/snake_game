@@ -7,12 +7,12 @@ pygame.init()
 
 IS_RUNNING = True
 base=pygame.display.set_mode((690,510))
-game_font=pygame.font.SysFont(pygame.font.get_default_font(),40)
-surface = game_font.render('hello python!',False,(255,200,10))
+# game_font=pygame.font.SysFont(pygame.font.get_default_font(),40)
+# surface = game_font.render('hello python!',False,(255,200,10))
 
 
-sound_obj = pygame.mixer.Sound("/Users/docoben/Desktop/python 遊戲課程/sound01.wav")
-sound_obj.play()
+# sound_obj = pygame.mixer.Sound("/Users/docoben/Desktop/python 遊戲課程/sound01.wav")
+# sound_obj.play()
 
 snake_head = pygame.image.load("snake_head.png")
 snake_straight = pygame.image.load("snake_straight.png")
@@ -71,15 +71,16 @@ while IS_RUNNING:
         food_point_py = random.randrange(30, 420, 30)
         #新增跟刪除蛇的座標
         point.append([px, py])
-        print(point)
+        # print(point)
         #結束遊戲畫面
         # exit()
-
     else:
+        if [px,py] in point:#蛇撞到自己的身體 檢查是否已存在的x y座標
+            exit()
         #新增跟刪除蛇的座標
         point.append([px, py])
         point.pop(0)
-        print(point)
+        # print(point)
 
     rect_wall_1 = pygame.Rect(0, 0, 690, 30)
     rect_wall_2 = pygame.Rect(0, 0, 30, 510)
@@ -106,7 +107,7 @@ while IS_RUNNING:
     pygame.draw.rect(base,[0,0,255],[0,480,690,30],0)
       
     pygame.display.update() #update 視窗
-    time.sleep(0.3)
+    time.sleep(0.2)
     
 
 
